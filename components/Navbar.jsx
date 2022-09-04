@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import {RiShoppingBag2Line} from 'react-icons/Ri'
+import {RiShoppingBag2Line} from 'react-icons/ri'
 import {Context} from '../context/StateContext'
 import Cart from './Cart'
 
