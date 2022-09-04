@@ -68,10 +68,10 @@ const handelscroll = () => {
     <div className='product-details'>
         <div className='product-details-container'>
             <div className='other-image'>
-            <img onMouseEnter={() => setindex(1)} onMouseLeave={() => setindex(0)} src={urlFor(product?.product.image[1])} alt='Ball' className='image-other' />
+            <img onMouseEnter={() => setindex(1)} onMouseLeave={() => setindex(0)} src={urlFor(product.product.image[1])} alt='Ball' className='image-other' />
 
             </div>
-        <img src={urlFor(product?.product.image[index])} alt='Ball' className='image-slug' />
+        <img src={urlFor(product.product.image[index])} alt='Ball' className='image-slug' />
 <div className='ball-info'>
     <p>Basketball</p>
 <h2 className='product-name'>{product.product.name}</h2>
