@@ -1,7 +1,7 @@
 import React,{useContext, useEffect , useState} from 'react'
 import { client , urlFor  } from '../../lib/client'
 import { Context } from '../../context/StateContext'
-import { Rating } from 'react-simple-star-rating'
+// import { Rating } from 'react-simple-star-rating'
 // import { Footer } from '../../components'
 
 
@@ -22,10 +22,10 @@ const [rating, setRating] = useState(0) // initial rating value
 
 
 // Catch Rating value
-const handleRating = (rate) => {
-  setRating(rate)
-  // other logic
-}
+// const handleRating = (rate) => {
+//   setRating(rate)
+//   // other logic
+// }
 
 const handelscroll = () => {
 
@@ -75,7 +75,7 @@ const handelscroll = () => {
 <div className='ball-info'>
     <p>Basketball</p>
 <h2 className='product-name'>{product.product.name}</h2>
-<Rating onClick={() => handleRating} ratingValue={rating} />
+{/* <Rating onClick={() => handleRating} ratingValue={rating} /> */}
 <div className='price'>
     
 <h2>Price :</h2>
