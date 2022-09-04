@@ -2,7 +2,7 @@ import React,{useContext, useEffect , useState} from 'react'
 import { client , urlFor  } from '../../lib/client'
 import { Context } from '../../context/StateContext'
 import { Rating } from 'react-simple-star-rating'
-import { Footer } from '../../components'
+// import { Footer } from '../../components'
 
 
 
@@ -103,7 +103,7 @@ const handelscroll = () => {
   
 
     </div>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   )
 }
