@@ -67,7 +67,6 @@ const handelscroll = () => {
     <>
     <div className='product-details'>
         <div className='product-details-container'>
-          {/* <div className=''></div> */}
             <div className='other-image'>
             <img onMouseEnter={() => setindex(1)} onMouseLeave={() => setindex(0)} src={urlFor(product?.product.image[1])} alt='Ball' className='image-other' />
 
@@ -112,40 +111,6 @@ const handelscroll = () => {
 
 
 
-// export const getStaticPaths =async () => {
-//     const products = await client.fetch(`*[_type == "product"]`)
-
-// const paths = products.map((product)  => ({
-
-//     params:{
-//         slug:`${product.slug.current}`
-        
-//     }
-    
-    
-// })) 
-
-// return{
-//     paths,fallback:'blocking'
-// }
-
-// }
-
-
-
-
-
-
-// export async function getStaticProps({params}){
-//     const product = await client.fetch(`*[_type == "product" && slug.current == '${params.slug}'][0]`)
-//     const products = await client.fetch(`*[_type == "product"]`)
-    
-
-  
-//     return {
-//       props: { product , products}
-//     }
-//   }
 
 
 
