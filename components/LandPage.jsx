@@ -5,8 +5,6 @@ import { GiBasketballBall } from "react-icons/gi";
 import { Context } from '../context/StateContext';
 
 const LandPage = ({product}) => {
-    const context = useContext(Context)
-    const {showcart , setshowcart} = context 
 const handleshowmore = () => {
 
 window.scrollTo({

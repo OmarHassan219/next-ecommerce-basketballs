@@ -6,9 +6,6 @@ import Link from 'next/link'
 
 
 const Product = (product) => {
-const context =useContext(Context)
-const {landpageadd , qty , setqty} = context
-const [ownqty, setownqty] = useState(0)
 const [i, seti] = useState(0)
   return (
 <>
