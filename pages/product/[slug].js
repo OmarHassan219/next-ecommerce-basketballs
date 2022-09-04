@@ -1,8 +1,8 @@
 import React,{useContext, useEffect , useState} from 'react'
-import { client ,urlFor  } from '../../lib/client'
+import { client , urlFor  } from '../../lib/client'
 import { Context } from '../../context/StateContext'
 import { Rating } from 'react-simple-star-rating'
-import {Footer } from '../../components'
+import { Footer } from '../../components'
 
 
 
@@ -10,10 +10,10 @@ import {Footer } from '../../components'
 
 
 
-const ProductDetails = ({product}) => {
+const ProductDetails = (product) => {
     const [qtyy, setqtyy] = useState(1)
 const context= useContext(Context)
-const {scroll  , setscroll , landpageadd} = context
+const {setscroll , landpageadd} = context
 const [index, setindex] = useState(0)
 const [rating, setRating] = useState(0) // initial rating value
 
@@ -68,10 +68,10 @@ const handelscroll = () => {
     <div className='product-details'>
         <div className='product-details-container'>
             <div className='other-image'>
-            <img onMouseEnter={() => setindex(1)} onMouseLeave={() => setindex(0)} src={urlFor(product?.product.image[1])} alt='Ball' className='image-other' />
+            <img onMouseEnter={() => setindex(1)} onMouseLeave={() => setindex(0)} src={urlFor(product.product.image[1])} alt='Ball' className='image-other' />
 
             </div>
-        <img src={urlFor(product?.product.image[index])} alt='Ball' className='image-slug' />
+        <img src={urlFor(product.product.image[index])} alt='Ball' className='image-slug' />
 <div className='ball-info'>
     <p>Basketball</p>
 <h2 className='product-name'>{product.product.name}</h2>
