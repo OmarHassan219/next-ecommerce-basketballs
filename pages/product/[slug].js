@@ -10,7 +10,7 @@ import {Footer } from '../../components'
 
 
 
-const ProductDetails = (product) => {
+const ProductDetails = ({product}) => {
     const [qtyy, setqtyy] = useState(1)
 const context= useContext(Context)
 const {scroll  , setscroll , landpageadd} = context
@@ -139,14 +139,14 @@ return{
 export const getStaticProps = async({params:{slug}}) => {
 const query = `*[_type == "product" && slug.current == '${slug}'][0]`
 
-const productsQuery = '*[_type == "product"]'
+
 const product = await client.fetch(query)
-const products = await client.fetch(productsQuery)
+
 
 
 return { 
 
-  props:{products , product}
+  props:{product}
 
 }
 
