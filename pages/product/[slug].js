@@ -10,7 +10,7 @@ import {Footer } from '../../components'
 
 
 
-const ProductDetails = (product , products) => {
+const ProductDetails = (product) => {
     const [qtyy, setqtyy] = useState(1)
 const context= useContext(Context)
 const {scroll  , setscroll , landpageadd} = context
