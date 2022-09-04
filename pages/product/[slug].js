@@ -75,7 +75,7 @@ const handelscroll = () => {
 <div className='ball-info'>
     <p>Basketball</p>
 <h2 className='product-name'>{product.product.name}</h2>
-<Rating onClick={handleRating} ratingValue={rating} /* Available Props */ />
+<Rating onClick={() => handleRating} ratingValue={rating} />
 <div className='price'>
     
 <h2>Price :</h2>
