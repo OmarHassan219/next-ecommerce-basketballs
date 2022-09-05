@@ -10,7 +10,7 @@ import { Context } from '../../context/StateContext'
 
 
 
-const ProductDetails = (product , products) => {
+const ProductDetails = ({product , products}) => {
     const [qtyy, setqtyy] = useState(1)
 const context= useContext(Context)
 const {setscroll , landpageadd} = context
@@ -68,18 +68,18 @@ const handelscroll = () => {
     <div className='product-details'>
         <div className='product-details-container'>
             <div className='other-image'>
-            <img onMouseEnter={() => setindex(1)} onMouseLeave={() => setindex(0)} src={urlFor(product.product.image[1])} alt='Ball' className='image-other' />
+            <img onMouseEnter={() => setindex(1)} onMouseLeave={() => setindex(0)} src={urlFor(product.image[1])} alt='Ball' className='image-other' />
 
             </div>
-        <img src={urlFor(product.product.image[index])} alt='Ball' className='image-slug' />
+        <img src={urlFor(product.image[index])} alt='Ball' className='image-slug' />
 <div className='ball-info'>
     <p>Basketball</p>
-<h2 className='product-name'>{product.product.name}</h2>
+<h2 className='product-name'>{product.name}</h2>
 {/* <Rating onClick={() => handleRating} ratingValue={rating} /> */}
 <div className='price'>
     
 <h2>Price :</h2>
-<h2>${product.product.price}</h2>
+<h2>${product.price}</h2>
 
 
 </div>
@@ -138,18 +138,18 @@ return{
 
 
 export const getStaticProps = async({params:{slug}}) => {
-const query = `*[_type == "product"][0]`
-const queryall = `*[_type == "product"]`
+  const query = `*[_type == "product" && slug.current == '${slug}'][0]`
 
-const product = await client.fetch(query)
-const products = await client.fetch(queryall)
+  const productsQuery = '*[_type == "product"]'
+  const product = await client.fetch(query)
+  const products = await client.fetch(productsQuery)
 
 
 
 return { 
 
   props:{product , products},
-  revalidate: 10,
+
 
 }
 
