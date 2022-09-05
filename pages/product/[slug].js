@@ -130,7 +130,7 @@ const paths = products.map((product)  => ({
 })) 
 
 return{
-    paths,fallback:'blocking'
+    paths,fallback:'true'
 }
 
 }
