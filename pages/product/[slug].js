@@ -18,7 +18,7 @@ const [index, setindex] = useState(0)
 const [rating, setRating] = useState(0) // initial rating value
 
 
-
+// console.log(product)
 
 
 // Catch Rating value
@@ -116,9 +116,10 @@ const handelscroll = () => {
 
 
   export const getStaticPaths =async () => {
-    const query = `*[_type == "product"] {slug{current}} `
+    const query = `*[_type == "product"] {slug{current}}`
 
 const products =await client.fetch(query)
+console.log(products)
 const paths = products.map((product)  => ({
 
     params:{
@@ -127,10 +128,11 @@ const paths = products.map((product)  => ({
     }
     
     
-})) 
+}))
 
 return{
-    paths,fallback:'true'
+    paths
+    ,fallback:'blocking'
 }
 
 }
@@ -138,15 +140,17 @@ return{
 
 export const getStaticProps = async({params:{slug}}) => {
 const query = `*[_type == "product" && slug.current == '${slug}'][0]`
-
+const queryall = `*[_type == "product"]`
 
 const product = await client.fetch(query)
+const products = await client.fetch(queryall)
 
 
 
 return { 
 
-  props:{product}
+  props:{product , products},
+  revalidate: 10,
 
 }
 
