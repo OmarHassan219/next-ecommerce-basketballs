@@ -1,7 +1,7 @@
 import React ,{useState , useContext} from 'react'
 import { urlFor } from '../lib/client'
 
-import {Context} from '../context/StateContext'
+
 import Link from 'next/link'
 
 
