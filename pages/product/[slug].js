@@ -123,8 +123,7 @@ const products =await client.fetch(query)
 const paths = products.map((product)  => ({
 
     params:{
-        slug:`${product}`
-        
+        slug: product.slug.current
     }
     
     
