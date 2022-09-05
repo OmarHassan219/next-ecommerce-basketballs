@@ -11,6 +11,7 @@ import { Context } from '../../context/StateContext'
 
 
 const ProductDetails = ({product}) => {
+  const {image,name,price} = product;
     const [qtyy, setqtyy] = useState(1)
 const context= useContext(Context)
 const {setscroll , landpageadd} = context
@@ -68,18 +69,18 @@ const handelscroll = () => {
     <div className='product-details'>
         <div className='product-details-container'>
             <div className='other-image'>
-            <img onMouseEnter={() => setindex(1)} onMouseLeave={() => setindex(0)} src={urlFor(product.image[1])} alt='Ball' className='image-other' />
+            <img onMouseEnter={() => setindex(1)} onMouseLeave={() => setindex(0)} src={urlFor(image && image[1])} alt='Ball' className='image-other' />
 
             </div>
-        <img src={urlFor(product.image[index])} alt='Ball' className='image-slug' />
+        <img src={urlFor(image && image[index])} alt='Ball' className='image-slug' />
 <div className='ball-info'>
     <p>Basketball</p>
-<h2 className='product-name'>{product.name}</h2>
+<h2 className='product-name'>{name}</h2>
 {/* <Rating onClick={() => handleRating} ratingValue={rating} /> */}
 <div className='price'>
     
 <h2>Price :</h2>
-<h2>${product.price}</h2>
+<h2>${price}</h2>
 
 
 </div>
