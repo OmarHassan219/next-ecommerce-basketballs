@@ -10,7 +10,7 @@ import { Context } from '../../context/StateContext'
 
 
 
-const ProductDetails = (product) => {
+const ProductDetails = (product , products) => {
     const [qtyy, setqtyy] = useState(1)
 const context= useContext(Context)
 const {setscroll , landpageadd} = context
@@ -18,7 +18,7 @@ const [index, setindex] = useState(0)
 const [rating, setRating] = useState(0) // initial rating value
 
 
-// console.log(product)
+console.log(products)
 
 
 // Catch Rating value
@@ -119,7 +119,6 @@ const handelscroll = () => {
     const query = `*[_type == "product"] {slug{current}}`
 
 const products =await client.fetch(query)
-console.log(products)
 const paths = products.map((product)  => ({
 
     params:{
@@ -139,7 +138,7 @@ return{
 
 
 export const getStaticProps = async({params:{slug}}) => {
-const query = `*[_type == "product" && slug.current == '${slug}'][0]`
+const query = `*[_type == "product"][0]`
 const queryall = `*[_type == "product"]`
 
 const product = await client.fetch(query)
