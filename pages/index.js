@@ -81,12 +81,13 @@ useEffect(() => {
 
 
 
-export async function getServerSideProps() {
-  const product = await client.fetch(`*[_type == "product"]`)
+export const getServerSideProps = async () => {
+  const query = '*[_type == "product"]';
+  const products = await client.fetch(query);
+
+
 
   return {
-    props: {
-      product
-    }
-  };
+    props: {products}
+  }
 }
