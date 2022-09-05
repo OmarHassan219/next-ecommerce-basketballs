@@ -10,7 +10,7 @@ import { Context } from '../../context/StateContext'
 
 
 
-const ProductDetails = ({product , products}) => {
+const ProductDetails = ({product}) => {
     const [qtyy, setqtyy] = useState(1)
 const context= useContext(Context)
 const {setscroll , landpageadd} = context
@@ -137,18 +137,18 @@ return{
 }
 
 
-export const getStaticProps = async({params:{slug}}) => {
-  const query = `*[_type == "product"][0]`
+export const getStaticProps = async({params}) => {
+  const query = `*[_type == "product" && slug.current == '${params.slug}'][0]`
 
-  const productsQuery = '*[_type == "product"]'
+ 
   const product = await client.fetch(query)
-  const products = await client.fetch(productsQuery)
+ 
 
 
 
 return { 
 
-  props:{product , products},
+  props:{product},
 
 
 }

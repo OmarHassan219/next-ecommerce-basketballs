@@ -5,23 +5,23 @@ import { urlFor } from '../lib/client'
 import Link from 'next/link'
 
 
-const Product = (product) => {
+const Product = ({product}) => {
 const [i, seti] = useState(0)
   return (
 <>
-<Link  href={`/product/${product.product.slug.current}`}>
+<Link  href={`/product/${product.slug.current}`}>
     <div className='card'>
 
-<img onMouseLeave={() => seti(0)} onMouseEnter={() => seti(1)} className='land-page-img' src={ urlFor(product?.product.image[i]) } alt='NBA Ball' />
+<img onMouseLeave={() => seti(0)} onMouseEnter={() => seti(1)} className='land-page-img' src={ urlFor(product.image[i]) } alt='NBA Ball' />
     
 <div className="ball-name">
     
     <p className='name'>
-    {product.product.name} 
+    {product.name} 
 
     </p>
 
-<p>${product.product.price}</p>
+<p>${product.price}</p>
 
 
 
