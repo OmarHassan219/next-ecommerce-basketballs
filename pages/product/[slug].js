@@ -18,7 +18,7 @@ const [index, setindex] = useState(0)
 const [rating, setRating] = useState(0) // initial rating value
 
 
-console.log(products)
+console.log(product)
 
 
 // Catch Rating value
