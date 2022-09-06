@@ -88,7 +88,7 @@ const handelscroll = () => {
 <label className='slug-qty'>Qty: </label>
 <input className='input-num' onChange={(e) => setqtyy(e.target.value)} value={qtyy} type='number' title='Qty' min='1' max='1000' />
 </div>
-<button className='add-to-bag' onClick={() => landpageadd(product.product , parseInt(qtyy) , product.product._id)} type='button'>ADD TO BAG</button>
+<button className='add-to-bag' onClick={() => landpageadd(product , parseInt(qtyy) , product._id)} type='button'>ADD TO BAG</button>
 
 
 
