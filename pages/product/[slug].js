@@ -1,8 +1,8 @@
 import React,{useContext, useEffect , useState} from 'react'
 import { client , urlFor  } from '../../lib/client'
 import { Context } from '../../context/StateContext'
-// import { Rating } from 'react-simple-star-rating'
-// import { Footer } from '../../components'
+import { Rating } from 'react-simple-star-rating'
+import { Footer } from '../../components'
 
 
 
@@ -23,10 +23,10 @@ console.log(product)
 
 
 // Catch Rating value
-// const handleRating = (rate) => {
-//   setRating(rate)
-//   // other logic
-// }
+const handleRating = (rate) => {
+  setRating(rate)
+  // other logic
+}
 
 const handelscroll = () => {
 
@@ -104,7 +104,7 @@ const handelscroll = () => {
   
 
     </div>
-    {/* <Footer/> */}
+    <Footer/>
     </>
   )
 }
