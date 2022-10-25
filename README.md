@@ -1,34 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Description
 
-## Getting Started
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-First, run the development server:
+Built a small ecommerce website to buy some Wilson Basketballs that allows the user to choose
+between different basketballs and add it to the cart and head to the checkout .
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+![Thumbnail](https://user-images.githubusercontent.com/93274331/197858401-414192e3-1f81-4bfa-a781-724db006c71c.png)
 
-To learn more about Next.js, take a look at the following resources:
+The idea is to practice nextJS and try to use CMS (Content Management System) which is Sanity to fetch the basketballs and their information including name,price,side images and more. In addition, there is an option for a complete payment process using Stripe API.    
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Demo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Live view by clicking the badge: [![Vercel Status](https://img.shields.io/badge/Vercel-success-Green?logo=vercel)](https://next-ecommerce-basketballs.vercel.app/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can also clone the project and open it in localhost, or enjoy the preview
+video below instead :smile:
+
+
+
+https://user-images.githubusercontent.com/93274331/197862641-172fce4f-1c2b-4943-8d0f-f05d98439151.mp4
+
+
+
+# Contribution
+
+To contribute to this project please check out the [contribution guidelines]().
+
+## Prerequisits
+
+Before cloning/forking this project, make sure you have the following tools installed:
+
+- [Git](https://git-scm.com/downloads)
+- [NodeJS](https://nodejs.org/en/download/)
+
+## Installation
+
+1. Fork the project
+2. Clone the project
+3. Follow the instructions in the console:
+4. Navigate to the project directory cd sos-animals
+5. Install the dependencies npm install
+6. Run the project npm start
+()
+
+## Contributors
+
+[//]: contributor-faces
+
+<a href="https://github.com/OmarHassan219"><img src="https://user-images.githubusercontent.com/93274331/197844576-742114a7-4a91-4af5-924e-9eb466f38498.jpg" title="Omar Hassan" width="80" height="80" style="border-radius:50%"></a>
+
+[//]: contributor-faces
